@@ -7,16 +7,26 @@
   --green: #013a20;
   --black: #000;
 }
+html{
+  height:100%;
+}
 
 body {
   font-family: "Work Sans";
   background: #fffef8;
   color: var(--black);
   font-size: 1em;
-  margin: 0;
+  /* margin: 0; */
 
   max-width: 1920px;
-  height: 100vh;
+  /* height: 100vh; */
+
+  margin: 0;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* min-height: 100vh; */
+  height: 100%;
+  position: relative;
 }
 .container {
   min-height: 100%;
@@ -97,7 +107,7 @@ main {
   min-height: 100%;
   padding-bottom: 40px;
   /* padding-bottom: 200px; */
-  /* position: relative; */
+  position: relative;
 }
 
 #about {
@@ -266,7 +276,9 @@ main {
 
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
-
+.gallery a:hover {
+  transform: scale(1.04);
+}
 /* .gallery figure {
   background: var(--brown);
   height: 350px;
@@ -304,20 +316,24 @@ main {
   justify-content: flex-end;
   margin-top: 20px;
 
-  width: 100%;
+  width: 96%;
   margin-left: auto;
   margin-right: auto;
 }
 /* .textUp {
   font-size: 0.65em;
-} */
-.arrowUp {
-  border-radius: 50%;
-  padding: 1.5%;
-  color: var(--white);
-  background: linear-gradient(to bottom, transparent, black);
-  font-weight: bolder;
-}
+  } */
+  .arrowUp {
+    border-radius: 40px;
+    padding: 16px;
+    color: var(--white);
+    background: linear-gradient(to bottom, transparent, black);
+    /* font-weight: bolder; */
+  }
+  .arrowUp:hover {
+    transform: scale(1.04);
+    color: var(--black);
+  }
 /* .arrowUp:hover {
   color: #c3f0c6 ;
 } */
@@ -330,15 +346,11 @@ footer {
   width: 100%;
   position: absolute;
   /* bottom: 0; */
-  height: 200px;
+  /* bottom: -613%; */
+  /* height: 200px; */
 
   display: flex;
-  /* justify-content: space-around; */
-  /* flex-direction: column; */
   align-items: center;
-
-  /* padding-top: 32px; */
-  /* padding-bottom: 40px; */
 }
 footer h2 {
   color: var(--white);
@@ -581,9 +593,9 @@ footer img {
   .pageUp {
     width: 90%;
   }
-  .arrowUp{
+  /* .arrowUp{
     padding: 4.5%;
-  }
+  } */
   footer {
     /* flex-direction: column; */
     height: fit-content;
