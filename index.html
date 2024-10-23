@@ -8,6 +8,7 @@
     <script src="https://kit.fontawesome.com/8f2991717e.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="./assets/images/profil.png" type="image/x-icon">
     <link rel="stylesheet" href="./assets/style.css">
+    <script src="./assets/scripts/filters.js" defer></script>
     <script src="./assets/scripts/script.js" defer></script>
 </head>
 
@@ -43,13 +44,13 @@
                     <article>
                         <h2 class="underline title">Intégrateur web</h2>
                         <p>J'ai suivi une formation d'Intégrateur Web chez OpenClassrooms.</br>
-                            J’aime faire, apprendre, trouver des solutions, recommencer... pour partager, aider, réunir
-                            grâce aux applications et sites web dans l’envie d’une “Tech for good”.</br>
+                            J’aime faire, apprendre, trouver des solutions, recommencer...</br>pour partager, aider, réunir
+                            grâce aux applications et sites web</br>dans l’envie d’une “Tech for good”.</br>
                         </p>
                     </article>
                     <article>
                         <div class="soft-skills">
-                            <h2 class="underline title">soft skills</h2>
+                            <h2 class="underline title">Soft skills</h2>
                             <!-- <i class="fa-solid fa-heart"></i> -->
                             <span class="tag">rigueur</span>
                             <!-- <i class="fa-solid fa-heart"></i> -->
@@ -112,16 +113,19 @@
 
                 </div>
                 <div class="filters">
-                    <button class="filters-button">Tous</button>
-                    <button class="filters-button">HTML/CSS</button>
-                    <button class="filters-button">Responsive</button>
-                    <button class="filters-button">Sass</button>
-                    <button class="filters-button">Javascript</button>
-                    <button class="filters-button">React</button>
-                    <button class="filters-button">Développement web</button>
+                    <button class="filters-button btn-selected" data-category="0">Tous</button>
+                    <button class="filters-button" data-category="1">HTML/CSS</button>
+                    <button class="filters-button" data-category="2">Responsive</button>
+                    <button class="filters-button" data-category="3">Sass</button>
+                    <button class="filters-button" data-category="4">Javascript</button>
+                    <button class="filters-button" data-category="5">React</button>
+                    <button class="filters-button" data-category="6">Développement web</button>
                 </div>
                 <div class="gallery">
-                    <a href="https://sandydoc.github.io/Riding_Cities/" target="_blank">
+                    <a href="https://github.com/SandyDOC/Riding_Cities/" 
+                       target="_blank"
+                       data-category="1">
+                       <!-- class="project htmlcss" -->
                         <div class="project_content">
                             <div class="project_view">
                                 <figure>
@@ -138,7 +142,8 @@
                             <div class="project_overlay">
                                 <div class="project_details">
                                     <h4>Compétences</h4>
-                                    <p class="text">Intégrer des éléments sur une page web en utilisant les fondamentaux de HTML</p>
+                                    <p class="text">Intégrer des éléments sur une page web en utilisant les fondamentaux
+                                        de HTML</p>
                                     <h4>Langages</h4>
                                     <p class="text">HTML / CSS</p>
                                     <!-- <a href="https://sandydoc.github.io/Riding_Cities/" target="_blank" class="specific-link">Lien vers la même page</a> -->
@@ -146,7 +151,11 @@
                             </div>
                         </div>
                     </a>
-                    <a href="https://sandydoc.github.io/Booki/" target="_blank">
+                    <a href="https://github.com/SandyDOC/Booki" 
+                       target="_blank"
+                       data-category="1 2">
+                       <!-- class="project htmlcss responsive"> -->
+                        <!-- <a href="https://sandydoc.github.io/Booki/" target="_blank"> -->
                         <figure></figure>
                         <!-- <img src="./assets/images/booki.webp" alt="aperçu du projet numéro 2 : Booki"
                             class="gallery_image"> -->
@@ -156,17 +165,25 @@
                             <p>>> En savoir plus</p>
                         </figcaption>
                     </a>
-                    <a href="https://sandydoc.github.io/OhMyFood/" target="_blank">
+                    <a href="https://github.com/SandyDOC/OhMyFood" 
+                       target="_blank"
+                       data-category="1 2 3">
+                       <!-- class="project htmlcss responsive sass"> -->
+                        <!-- <a href="https://sandydoc.github.io/OhMyFood/" target="_blank"> -->
                         <figure></figure>
-                        <!-- <img src="./assets/images/oh-my-food.webp" alt="aperçu du projet numéro 3 : Oh my food"
-                            class="gallery_image"> -->
+                        <img src="./assets/images/oh-my-food.png" alt="aperçu du projet numéro 3 : Oh my food"
+                            class="gallery_image">
                         <figcaption>
                             <h3>Oh my food</h3>
                             <h4>Site statique d'un site "mobile first" des menus de restaurants gastronomiques</h4>
                             <p>>> En savoir plus</p>
                         </figcaption>
                     </a>
-                    <a href="https://sandydoc.github.io/Print-it-JS/" target="_blank">
+                    <a href="https://github.com/SandyDOC/Print-it-JS"
+                       target="_blank"
+                       data-category="1 4">
+                       <!-- class="project htmlcss javascript"> -->
+                        <!-- <a href="https://sandydoc.github.io/Print-it-JS/" target="_blank"> -->
                         <figure></figure>
                         <!-- <img src="./assets/images/print-it.webp" alt="aperçu du projet numéro 4 : Print it"
                             class="gallery_image"> -->
@@ -176,7 +193,10 @@
                             <p>>> En savoir plus</p>
                         </figcaption>
                     </a>
-                    <a href="#">
+                    <a href="https://github.com/SandyDOC/Sophie-Bluel-portfolio-architecte-" 
+                       target="_blank"
+                       data-category="1 3 4">
+                       <!-- class="project htmlcss javascript sass"> -->
                         <figure></figure>
                         <!-- <img src="./assets/images/sophie-bluel.webp"
                             alt="aperçu du projet numéro 5 : Portfolio de l'architecte Sophie Bluel"
@@ -187,7 +207,11 @@
                             <p>>> En savoir plus</p>
                         </figcaption>
                     </a>
-                    <a href="https://sandydoc.github.io/P7_Kasa/" target="_blank">
+                    <a href="https://github.com/SandyDOC/P7_Kasa" 
+                       target="_blank"
+                       data-category="2 5">
+                       <!-- class="project react responsive"> -->
+                        <!-- <a href="https://sandydoc.github.io/P7_Kasa/" target="_blank"> -->
                         <figure></figure>
                         <!-- <img src="./assets/images/kasa.webp" alt="aperçu du projet numéro 6 : Kasa"
                         class="gallery_image"> -->
@@ -197,7 +221,11 @@
                             <p>>> En savoir plus</p>
                         </figcaption>
                     </a>
-                    <a href="https://sandydoc.github.io/Nina_Carducci/" target="_blank">
+                    <a href="https://github.com/SandyDOC/Nina_Carducci" 
+                       target="_blank"
+                       data-category="6">
+                       <!-- class="project développementweb"> -->
+                        <!-- <a href="https://sandydoc.github.io/Nina_Carducci/" target="_blank"> -->
                         <figure></figure>
                         <!-- <img src="./assets/images/nina-carducci.webp"
                             alt="aperçu du projet numéro 7 : Optimisation du site de la photographe Nina Carducci"
@@ -208,7 +236,10 @@
                             <p>>> En savoir plus</p>
                         </figcaption>
                     </a>
-                    <a href="#">
+                    <a href="https://github.com/SandyDOC/724events" 
+                       target="_blank"
+                       data-category="6">
+                       <!-- class="project développementweb"> -->
                         <figure></figure>
                         <!-- <img src="./assets/images/"
                             alt="aperçu du projet numéro 8 : Debug de 724 events"
@@ -219,7 +250,10 @@
                             <p>>> En savoir plus</p>
                         </figcaption>
                     </a>
-                    <a href="#">
+                    <a href="https://github.com/SandyDOC/ArgentBank" 
+                       target="_blank"
+                       data-category="2 5">
+                       <!-- class="project react responsive"> -->
                         <figure></figure>
                         <!-- <img src="./assets/images/nina-carducci.webp"
                             alt="aperçu du projet numéro 9 : Argent Bank"
@@ -230,7 +264,10 @@
                             <p>>> En savoir plus</p>
                         </figcaption>
                     </a>
-                    <a href="#">
+                    <a href="https://github.com/SandyDOC/Menu_Maker_by_Qwenta" 
+                       target="_blank"
+                       data-category="6">
+                       <!-- class="project developpement"> -->
                         <figure></figure>
                         <!-- <img src="./assets/images/nina-carducci.webp"
                             alt="aperçu du projet numéro 10 : Planification du projet Qwenta"
@@ -295,7 +332,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#" target="_blank" class="hoverGreen">
+                                <a href="https://www.linkedin.com/in/sandydambre" target="_blank" class="hoverGreen">
                                     <i class="fa-brands fa-linkedin"></i>
                                     <span>LinkedIn</span>
                                 </a>

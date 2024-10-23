@@ -12,7 +12,10 @@ html{
 }
 
 body {
-  font-family: "Work Sans";
+  font-family: "Roboto",sans-serif;
+  /* font-family: "Inter",sans-serif; */
+  letter-spacing: 0.8px;
+  /* font-family: "Work Sans"; */
   background: #fffef8;
   color: var(--black);
   font-size: 1em;
@@ -86,8 +89,12 @@ a {
   text-decoration: none;
   color: inherit;
   /* padding: 8px 17px 8px 17px; */
-  font-size: 1.2em;
-  font-weight: 500;
+  /* font-size: 1.2em; */
+  /* font-weight: 500; */
+}
+nav a.focus{
+  text-transform: uppercase;
+  font-weight: bold;
 }
 nav a.focus:hover {
   /* color: var(--white);
@@ -113,8 +120,9 @@ main {
 #about {
   background: var(--ivory);
   display: flex;
+  justify-content: space-around;
 
-  gap: 25px;
+  /* gap: 25px; */
 
   padding: 27px;
 
@@ -152,8 +160,10 @@ main {
   color: var(--green);
 }
 .soft-skills .tag {
-  border: 1px solid #000;
-  border-radius: 7px;
+  /* border: 1px solid #000; */
+  background: var(--white);
+  border-radius: 8px;
+  padding: 3px 11px 3px 11px;
 }
 /* .title h2 {
   border-bottom: 2px solid var(--green);
@@ -243,7 +253,12 @@ main {
   width: fit-content;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
-.filters-button:hover {
+.btn-selected{
+  color: #fffef8;
+  background-color: #1d6154;
+}
+.filters-button:hover,
+.arrowUp:hover {
   color: #fffef8;
   background-color: #1d6154;
   cursor: pointer;
@@ -372,7 +387,7 @@ main {
  }
  .training_container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
  }
  .training_container article {
   background: var(--ivory);
@@ -395,16 +410,22 @@ main {
   font-size: 0.65em;
   } */
   .arrowUp {
-    border-radius: 40px;
+    border-radius: 30px;
     padding: 16px;
-    color: var(--white);
-    background: linear-gradient(to bottom, transparent, black);
+    border: 3px solid #1d6154;
+    color: #1d6154;
+    background-color: #fffef8;
+    /* text-decoration: none; */
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  
+    /* color: var(--white); */
+    /* background: linear-gradient(to bottom, transparent, black); */
     /* font-weight: bolder; */
   }
-  .arrowUp:hover {
-    transform: scale(1.04);
-    color: var(--black);
-  }
+  /* .arrowUp:hover {
+    /* transform: scale(1.04); */
+    /* color: var(--black); */
+  /* } */ 
 /* .arrowUp:hover {
   color: #c3f0c6 ;
 } */
