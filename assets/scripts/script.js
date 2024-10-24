@@ -1,8 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
+    projectCarousel()
     updateProjects();
-    // Appel de la fonction dans filters.js après le chargement du DOM
     initializeFilters();
     dropdownFilters();
+    generateAndCopyEmail()
 });
 
 // // Sélectionne tous les boutons de filtre

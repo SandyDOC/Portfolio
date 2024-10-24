@@ -136,6 +136,49 @@ main {
   border-radius: 25px;
   /* box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25); */
 }
+
+.carousel-dots {
+  text-align: center;
+  margin-top: 10px; /* Espacement au-dessus des points */
+}
+
+.carousel-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #ccc; /* Couleur des points inactifs */
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.carousel-dot.active {
+  background-color: #333; /* Couleur des points actifs */
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 400px; /* Ajuste la hauteur selon tes images */
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  min-width: 100%;
+  transition: opacity 0.5s ease;
+}
+
+.carousel-item img {
+  width: 100%; /* S'adapte à la largeur du carousel */
+  height: auto; /* Garde les proportions de l'image */
+}
+
+
 .about_screen img {
   height: 218px;
   /* box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25); */
@@ -639,6 +682,44 @@ footer img {
   font-family: "Work Sans";
   font-size: 13px;
   letter-spacing: 0.1em;
+}
+/* .footer .informations ul li.footer_mail {
+  display: flex;
+  gap: 4px;
+} */
+.footer_mail {
+  position: relative;
+  display: flex;
+  gap: 5px;
+  /* display: inline-block; */
+  /* cursor: pointer; */
+}
+
+.tooltip-text {
+  visibility: hidden;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%; /* Ajuster pour positionner la bulle au-dessus de l'icône */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0.3s;
+  font-size: 12px;
+}
+
+/* Afficher le tooltip lors du survol de l'icône */
+#copyIcon:hover ~ .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.footer .informations ul li.fa-regular.fa-copy{
+  cursor: pointer;
 }
 
 @media (max-width: 1024px) {
