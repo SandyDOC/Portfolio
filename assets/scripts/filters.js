@@ -48,60 +48,161 @@ function initializeFilters() {
     });
 }
 
-// filters.js
 function dropdownFilters() {
-    const dropdownButton = document.getElementById("categoryDropdownButton");
-    const dropdownList = document.getElementById("categoryDropdownList");
-    const categoryItems = dropdownList.querySelectorAll("li");
+    const dropdownButton = document.getElementById('categoryDropdownButton');
+    const dropdownList = document.getElementById('categoryDropdownList');
+    const dropdownItems = dropdownList.querySelectorAll('li');
+    const dropdownArrow = document.getElementById('dropdownArrow');
+    const buttonText = dropdownButton.querySelector('.button-text');
+    let focusedItemIndex = -1;
 
-    // Toggle la visibilité de la liste déroulante au clic
-    dropdownButton.addEventListener("click", function () {
-        dropdownList.style.display = dropdownList.style.display === 'block' ? 'none' : 'block';
+    // Ajout des attributs ARIA pour l'accessibilité
+    dropdownButton.setAttribute('aria-haspopup', 'listbox');
+    dropdownButton.setAttribute('aria-expanded', 'false');
+    dropdownList.setAttribute('role', 'listbox');
+
+    dropdownItems.forEach(item => {
+        item.setAttribute('role', 'option');
+        item.setAttribute('tabindex', '-1'); // Focusable uniquement quand la liste est ouverte
     });
 
-    // Gérer la sélection d'une catégorie
-    categoryItems.forEach(item => {
-        item.addEventListener("click", function () {
-            const selectedCategory = this.getAttribute("data-category");
-
-            // Mettre à jour le texte et le data-category du bouton avec la catégorie sélectionnée
-            dropdownButton.textContent = this.textContent;
-            dropdownButton.setAttribute('data-category', selectedCategory);
-
-            // Supprimer l'ancienne classe active et ajouter la classe active sur la catégorie sélectionnée
-            categoryItems.forEach(i => i.classList.remove('active'));
-            this.classList.add('active');
-
-            // Fermer la liste déroulante après la sélection
-            dropdownList.style.display = 'none';
-
-            // Appliquer le tri par catégorie
-            filterProjectsByCategory(selectedCategory);
-        });
-    });
-
-    // Fonction pour filtrer les projets par catégorie
-    function filterProjectsByCategory(category) {
-        const projects = document.querySelectorAll('.gallery a');
-
-        // Si "Tous" est sélectionné (data-category="0"), afficher tous les projets
-        if (category === "0") {
-            projects.forEach(project => project.style.display = "block");
+    // Fonction pour ouvrir/fermer la liste déroulante
+    function toggleDropdown() {
+        const isOpen = dropdownList.classList.toggle('hide');
+        dropdownArrow.classList.toggle('rotate');
+        dropdownButton.setAttribute('aria-expanded', !isOpen);
+        if (!isOpen) {
+            focusedItemIndex = 0;
+            dropdownItems[focusedItemIndex].focus(); // Focus sur le premier élément
         } else {
-            projects.forEach(project => {
-                const projectCategories = project.getAttribute('data-category').split(' ');
-                // Afficher ou masquer le projet selon la catégorie sélectionnée
-                if (projectCategories.includes(category)) {
-                    project.style.display = "block";
-                } else {
-                    project.style.display = "none";
-                }
-            });
+            focusedItemIndex = -1;
         }
+    }
+
+    // Ferme la liste si on clique à l'extérieur
+    function closeDropdownOnClickOutside(event) {
+        if (!dropdownButton.contains(event.target) && !dropdownList.contains(event.target)) {
+            dropdownList.classList.add('hide');
+            dropdownArrow.classList.remove('rotate');
+            dropdownButton.setAttribute('aria-expanded', 'false');
+            document.removeEventListener('click', closeDropdownOnClickOutside);
+        }
+    }
+
+    // Gestion du clic sur le bouton pour afficher/masquer la liste
+    dropdownButton.addEventListener('click', function(event) {
+        toggleDropdown();
+        if (!dropdownList.classList.contains('hide')) {
+            document.addEventListener('click', closeDropdownOnClickOutside);
+        }
+    });
+
+    // Gérer la navigation au clavier dans la liste
+    dropdownButton.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            toggleDropdown();
+        } else if (event.key === 'ArrowDown' && !dropdownList.classList.contains('hide')) {
+            event.preventDefault();
+            focusedItemIndex = (focusedItemIndex + 1) % dropdownItems.length;
+            dropdownItems[focusedItemIndex].focus();
+        }
+    });
+
+    dropdownList.addEventListener('keydown', function(event) {
+        if (event.key === 'ArrowDown') {
+            event.preventDefault();
+            focusedItemIndex = (focusedItemIndex + 1) % dropdownItems.length;
+            dropdownItems[focusedItemIndex].focus();
+        } else if (event.key === 'ArrowUp') {
+            event.preventDefault();
+            focusedItemIndex = (focusedItemIndex - 1 + dropdownItems.length) % dropdownItems.length;
+            dropdownItems[focusedItemIndex].focus();
+        } else if (event.key === 'Enter') {
+            event.preventDefault();
+            const selectedItem = dropdownItems[focusedItemIndex];
+            selectCategory(selectedItem); // Sélectionne l'élément actif
+        } else if (event.key === 'Escape') {
+            event.preventDefault();
+            dropdownList.classList.add('hide');
+            dropdownArrow.classList.remove('rotate');
+            dropdownButton.setAttribute('aria-expanded', 'false');
+            dropdownButton.focus();
+        }
+    });
+
+    // Gestion du clic sur un élément de la liste pour changer la sélection
+    dropdownList.addEventListener('click', function(event) {
+        if (event.target.tagName === 'LI') {
+            selectCategory(event.target);
+        }
+    });
+
+    // Fonction pour sélectionner une catégorie
+    function selectCategory(item) {
+        const selectedCategory = item.textContent;
+        buttonText.textContent = selectedCategory;
+        dropdownButton.setAttribute('data-category', item.getAttribute('data-category'));
+        dropdownList.classList.add('hide');
+        dropdownArrow.classList.remove('rotate');
+        dropdownButton.setAttribute('aria-expanded', 'false');
+        dropdownButton.focus(); // Ramène le focus sur le bouton après sélection
+        filterProjects(item.getAttribute('data-category')); // Appel à la fonction de filtrage
+    }
+
+    // Fonction pour filtrer les projets en fonction de la catégorie sélectionnée
+    function filterProjects(category) {
+        const projects = document.querySelectorAll('.project'); // Remplacez '.project' par la classe de vos projets
+        projects.forEach(project => {
+            // Remplacez cette condition par la logique de filtrage qui convient à votre cas
+            if (project.getAttribute('data-category') === category || category === '0') { // '0' pour "Tous"
+                project.style.display = ''; // Affiche le projet
+            } else {
+                project.style.display = 'none'; // Cache le projet
+            }
+        });
     }
 }
 
-// // Exporter la fonction (facultatif, si tu utilises un module bundler comme Webpack)
-// export { dropdownFilters };
+// function dropdownFilters() {
+//     const dropdownButton = document.getElementById('categoryDropdownButton');
+//     const dropdownList = document.getElementById('categoryDropdownList');
+//     const dropdownArrow = document.getElementById('dropdownArrow'); // Sélection de l'icône FontAwesome
+//     const buttonText = dropdownButton.querySelector('.button-text'); // Texte du bouton
 
+//     // Fonction pour ouvrir/fermer la liste déroulante
+//     function toggleDropdown() {
+//         dropdownList.classList.toggle('hide');
+//         dropdownArrow.classList.toggle('rotate'); // Fait pivoter la flèche
+//     }
 
+//     // Fonction pour fermer la liste si on clique à l'extérieur
+//     function closeDropdownOnClickOutside(event) {
+//         if (!dropdownButton.contains(event.target) && !dropdownList.contains(event.target)) {
+//             dropdownList.classList.add('hide'); // Ferme la liste
+//             dropdownArrow.classList.remove('rotate'); // Remet la flèche dans sa position d'origine
+//             document.removeEventListener('click', closeDropdownOnClickOutside); // Supprime l'écouteur d'événements
+//         }
+//     }
+
+//     // Gestion du clic sur le bouton pour afficher/masquer la liste
+//     dropdownButton.addEventListener('click', function(event) {
+//         toggleDropdown(); // Ouvre/ferme la liste
+
+//         // Ajoute un écouteur pour fermer la liste si on clique à l'extérieur
+//         if (!dropdownList.classList.contains('hide')) {
+//             document.addEventListener('click', closeDropdownOnClickOutside);
+//         }
+//     });
+
+//     // Gestion du clic sur un élément de la liste pour changer la sélection
+//     dropdownList.addEventListener('click', function(event) {
+//         if (event.target.tagName === 'LI') {
+//             const selectedCategory = event.target.textContent;
+//             buttonText.textContent = selectedCategory; // Met à jour le texte du bouton
+//             dropdownButton.setAttribute('data-category', event.target.getAttribute('data-category')); // Met à jour l'attribut data-category
+//             dropdownList.classList.add('hide'); // Ferme la liste après sélection
+//             dropdownArrow.classList.remove('rotate'); // Remet la flèche dans sa position d'origine
+//         }
+//     });
+// }
