@@ -103,7 +103,18 @@
 
                     <h3 class="hide">Catégories</h3>
                     <div class="selectContainer hide">
-                        <select>
+                        <button id="categoryDropdownButton" class="dropdown-button" data-category="0">Tous</button>
+                        <!-- Liste déroulante des catégories -->
+                        <ul id="categoryDropdownList" class="dropdown-list hide">
+                            <li data-category="0">Tous</li>
+                            <li data-category="1">HTML/CSS</li>
+                            <li data-category="2">Responsive</li>
+                            <li data-category="3">Sass</li>
+                            <li data-category="4">Javascript</li>
+                            <li data-category="5">React</li>
+                            <li data-category="6">Développement Web</li>
+                        </ul>
+                        <!-- <select>
                             <option value="0">Tous</option>
                             <option value="1">HTML/CSS</option>
                             <option value="2">Responsive</option>
@@ -111,7 +122,7 @@
                             <option value="4">Javascript</option>
                             <option value="5">React</option>
                             <option value="6">Développement web</option>
-                        </select>
+                        </select> -->
                     </div>
                 </div>
                 <div class="filters">

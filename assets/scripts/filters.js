@@ -48,3 +48,60 @@ function initializeFilters() {
     });
 }
 
+// filters.js
+function dropdownFilters() {
+    const dropdownButton = document.getElementById("categoryDropdownButton");
+    const dropdownList = document.getElementById("categoryDropdownList");
+    const categoryItems = dropdownList.querySelectorAll("li");
+
+    // Toggle la visibilité de la liste déroulante au clic
+    dropdownButton.addEventListener("click", function () {
+        dropdownList.style.display = dropdownList.style.display === 'block' ? 'none' : 'block';
+    });
+
+    // Gérer la sélection d'une catégorie
+    categoryItems.forEach(item => {
+        item.addEventListener("click", function () {
+            const selectedCategory = this.getAttribute("data-category");
+
+            // Mettre à jour le texte et le data-category du bouton avec la catégorie sélectionnée
+            dropdownButton.textContent = this.textContent;
+            dropdownButton.setAttribute('data-category', selectedCategory);
+
+            // Supprimer l'ancienne classe active et ajouter la classe active sur la catégorie sélectionnée
+            categoryItems.forEach(i => i.classList.remove('active'));
+            this.classList.add('active');
+
+            // Fermer la liste déroulante après la sélection
+            dropdownList.style.display = 'none';
+
+            // Appliquer le tri par catégorie
+            filterProjectsByCategory(selectedCategory);
+        });
+    });
+
+    // Fonction pour filtrer les projets par catégorie
+    function filterProjectsByCategory(category) {
+        const projects = document.querySelectorAll('.gallery a');
+
+        // Si "Tous" est sélectionné (data-category="0"), afficher tous les projets
+        if (category === "0") {
+            projects.forEach(project => project.style.display = "block");
+        } else {
+            projects.forEach(project => {
+                const projectCategories = project.getAttribute('data-category').split(' ');
+                // Afficher ou masquer le projet selon la catégorie sélectionnée
+                if (projectCategories.includes(category)) {
+                    project.style.display = "block";
+                } else {
+                    project.style.display = "none";
+                }
+            });
+        }
+    }
+}
+
+// // Exporter la fonction (facultatif, si tu utilises un module bundler comme Webpack)
+// export { dropdownFilters };
+
+
