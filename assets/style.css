@@ -320,11 +320,13 @@ main {
   position: absolute;
   top: 201px;
   right: 15px;
-  width: 80px;
-  height: 29px;
+  /* width: 80px; */
+  /* height: 29px; */
   display: flex;
   align-items: center;
   justify-content: center;
+  width: fit-content;
+  padding: 5px 8px 5px 8px;
 }
 
 .gallery_image {

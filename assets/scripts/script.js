@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
+    updateProjects();
     // Appel de la fonction dans filters.js après le chargement du DOM
     initializeFilters();
 });
