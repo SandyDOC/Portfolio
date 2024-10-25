@@ -6,6 +6,7 @@ window.dataProjects =
             "image": "riding-cities.png",
             "tagLine": "html/css",
             "title": "Riding cities",
+            "link": "Riding_Cities",
             "description": "Site statique d'une association sportive de skate en région",
             "skills": "Intégrer des éléments sur une page web en utilisant les fondamentaux de HTML",
             "technologies": ["HTML/CSS", "maquette Figma"]
@@ -14,6 +15,7 @@ window.dataProjects =
             "image": "booki.png",
             "tagLine": "responsive",
             "title": "Booki",
+            "link": "Booki",
             "description": "Site statique d'une agence de voyage",
             "skills": [
                 "Implémenter une interface responsive avec HTML et CSS",
@@ -26,6 +28,7 @@ window.dataProjects =
             "image": "ohMyFood.png",
             "tagLine": "sass",
             "title": "OhMyFood",
+            "link": "OhMyFood",
             "description": `Site statique d'un site "mobile first" des menus de restaurants gastronomiques`,
             "skills": [
                 "Intégrer une maquette en mobile-first",
@@ -37,7 +40,8 @@ window.dataProjects =
             "data-category": "1 4",
             "image": "print-it.png",
             "tagLine": "javascript",
-            "title": "Print-it-JS",
+            "title": "Print it",
+            "link": "Print-it-JS",
             "description": `Site dynamique d'une petite imprimerie familiale`,
             "skills": "Programmer en utilisant les fondamentaux de JavaScript",
             "technologies": "Javascript"
@@ -45,7 +49,8 @@ window.dataProjects =
             "data-category": "1 3 4",
             "image": "sophie-bluel.png",
             "tagLine": "javascript",
-            "title": "Sophie-Bluel-portfolio-architecte-",
+            "title": "Sophie Bluel",
+            "link": "Sophie-Bluel-portfolio-architecte-",
             "description": `Site dynamique du portfolio d’une architecte d’intérieur`,
             "skills": [
                 "Gérer les événements utilisateurs avec JavaScript",
@@ -57,7 +62,8 @@ window.dataProjects =
             "data-category": "2 5",
             "image": "kasa.png",
             "tagLine": "react",
-            "title": "P7_Kasa",
+            "title": "Kasa",
+            "link": "P7_Kasa",
             "description": `Application de location immobilière`,
             "skills": [
                 "Initialiser une application avec Create React App",
@@ -71,7 +77,8 @@ window.dataProjects =
             "data-category": "6",
             "image": "nina-carducci.png",
             "tagLine": "développement",
-            "title": "Nina_Carducci",
+            "title": "Nina Carducci",
+            "link": "Nina_Carducci",
             "description": `Optimisation du référencement d'un site de photographe`,
             "skills": "Optimiser la performance d'un site web",
             "technologies": ["Lighthouse", "Wave", "Rich Snippet Google"]
@@ -79,7 +86,9 @@ window.dataProjects =
             "data-category": "6",
             "image": "724events.png",
             "tagLine": "développement",
-            "title": "724events",
+            "title": "724 events",
+            "link": "724events",
+            
             "description": `Débuggage du site d'une agence d'événementiel`,
             "skills": [
                 "Débugger un site web grâce aux Chrome DevTools",
@@ -91,6 +100,7 @@ window.dataProjects =
             "image": "ArgentBank.png",
             "tagLine": "react",
             "title": "ArgentBank",
+            "link": "ArgentBank",
             "description": `Application bancaire`,
             "skills": [
                 "Afficher les données du back end sur l'interface via des appels API",
@@ -102,7 +112,9 @@ window.dataProjects =
             "data-category": "6",
             "image": "menu-maker.png",
             "tagLine": "développement",
-            "title": "Menu_Maker_by_Qwenta",
+            "title": "Menu Maker",
+            "link": "Menu_Maker_by_Qwenta",
+
             "description": `Planification du développement du site`,
             "skills": [
                 "Présenter la solution technique",

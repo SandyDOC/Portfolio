@@ -74,7 +74,7 @@ function updateProjects() {
 
         if (projectElement) {
             // Mise à jour des attributs et contenu existants
-            projectElement.href = `https://github.com/SandyDOC/${project.title.replace(/\s+/g, '_')}/`;
+            projectElement.href = `https://github.com/SandyDOC/${project.link.replace(/\s+/g, '_')}/`;
             projectElement.setAttribute('data-category', project["data-category"]);
 
             const img = projectElement.querySelector('img.gallery_image');
