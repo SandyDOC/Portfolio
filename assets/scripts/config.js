@@ -43,7 +43,7 @@ window.dataProjects =
             "technologies": "Javascript"
         }, {
             "data-category": "1 3 4",
-            "image": "sophie-bluel.webp",
+            "image": "sophie-bluel.png",
             "tagLine": "javascript",
             "title": "Sophie-Bluel-portfolio-architecte-",
             "description": `Site dynamique du portfolio d’une architecte d’intérieur`,
@@ -88,7 +88,7 @@ window.dataProjects =
             "technologies": ["React Developer Tools", "Node.js/npm", "Yarn", "jest"]
         }, {
             "data-category": "2 5",
-            "image": "booki.png",
+            "image": "ArgentBank.png",
             "tagLine": "react",
             "title": "ArgentBank",
             "description": `Application bancaire`,
@@ -100,7 +100,7 @@ window.dataProjects =
             "technologies": ["React", "Redux", "MongoDB", "Documentation API Swagger"]
         }, {
             "data-category": "6",
-            "image": "booki.png",
+            "image": "menu-maker.png",
             "tagLine": "développement",
             "title": "Menu_Maker_by_Qwenta",
             "description": `Planification du développement du site`,

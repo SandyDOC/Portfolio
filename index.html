@@ -65,17 +65,19 @@
                     </article>
                     <article class="soft-skills">
                         <!-- <div class="soft-skills"> -->
-                            <h2 class="underline title">Soft skills</h2>
+                        <h2 class="underline title">Soft skills</h2>
+                        <div class="list_tag">
                             <span class="tag">rigueur</span>
                             <span class="tag">communication</span>
                             <span class="tag">travail en équipe</span>
+                        </div>
                         <!-- </div> -->
                     </article>
                 </div>
             </section>
             <section id="skills">
-                <div class="title center">
-                    <h2 class="underline">Mes compétences</h2>
+                <div class="center">
+                    <h2 class="underline title">Mes compétences</h2>
                 </div>
                 <div class="skills_list">
                     <ul>
@@ -107,278 +109,273 @@
                 </div>
             </section>
             <section id="portfolio">
-                <div class="center title">
-                    <h2 class="underline">Mes projets</h2>
+                <div class="center">
+                    <h2 class="underline title">Mes projets</h2>
 
                     <h3 class="hide">Catégories</h3>
                     <div class="selectContainer hide">
-                        <button id="categoryDropdownButton" class="dropdown-button" aria-haspopup="listbox" aria-expanded="false" data-category="0">
+                        <button id="categoryDropdownButton" class="dropdown-button" data-category="0">
                             <div class="button-content">
                                 <span class="button-text">Tous</span>
                                 <i id="dropdownArrow" class="fas fa-chevron-down"></i>
                             </div>
                         </button>
-                        <ul id="categoryDropdownList" class="dropdown-list hide" role="listbox" aria-labelledby="categoryDropdownButton">
-                            <li tabindex="0" role="option" data-category="0">Tous</li>
-                            <li tabindex="0" role="option" data-category="1">HTML/CSS</li>
-                            <li tabindex="0" role="option" data-category="2">Responsive</li>
-                            <li tabindex="0" role="option" data-category="3">Sass</li>
-                            <li tabindex="0" role="option" data-category="4">Javascript</li>
-                            <li tabindex="0" role="option" data-category="5">React</li>
-                            <li tabindex="0" role="option" data-category="6">Développement Web</li>
+                        <ul id="categoryDropdownList" class="dropdown-list hide">
+                            <li data-category="0">Tous</li>
+                            <li data-category="1">HTML/CSS</li>
+                            <li data-category="2">Responsive</li>
+                            <li data-category="3">Sass</li>
+                            <li data-category="4">Javascript</li>
+                            <li data-category="5">React</li>
+                            <li data-category="6">Développement Web</li>
                         </ul>
                     </div>
-                </div>
-                <div class="filters">
-                    <button class="filters-button btn-selected" data-category="0">Tous</button>
-                    <button class="filters-button" data-category="1">HTML/CSS</button>
-                    <button class="filters-button" data-category="2">Responsive</button>
-                    <button class="filters-button" data-category="3">Sass</button>
-                    <button class="filters-button" data-category="4">Javascript</button>
-                    <button class="filters-button" data-category="5">React</button>
-                    <button class="filters-button" data-category="6">Développement web</button>
-                </div>
-                <div class="gallery">
-                    <a href="" target="_blank" data-category="">
-                        <div class="project_content">
-                            <div class="project_view">
-                                <figure class="view_picture">
-                                    <img src="" alt="" class="gallery_image">
-                                    <span></span>
-                                </figure>
-                                <figcaption>
-                                    <h3 class="project_title"></h3>
-                                    <p class="project_description"></p>
-                                    <span>>> En savoir plus</span>
-                                </figcaption>
-                            </div>
-                            <div class="project_overlay">
-                                <div class="project_details">
-                                    <h4>Compétences</h4>
-                                    <ul class="competences_list"></ul>
-                                    <!-- <p class="text">Intégrer des éléments sur une page web en utilisant les fondamentaux
-                                        de HTML</p> -->
-                                    <h4>Technologies</h4>
-                                    <ul class="technologies_list"></ul>
-                                    <!-- <p class="text">HTML / CSS</p> -->
-
+                    <div class="filters">
+                        <button class="filters-button btn-selected" data-category="0">Tous</button>
+                        <button class="filters-button" data-category="1">HTML/CSS</button>
+                        <button class="filters-button" data-category="2">Responsive</button>
+                        <button class="filters-button" data-category="3">Sass</button>
+                        <button class="filters-button" data-category="4">Javascript</button>
+                        <button class="filters-button" data-category="5">React</button>
+                        <button class="filters-button" data-category="6">Développement web</button>
+                    </div>
+                    <div class="gallery">
+                        <a href="" target="_blank" data-category="">
+                            <div class="project_content">
+                                <div class="project_view">
+                                    <figure class="view_picture">
+                                        <img src="" alt="" class="gallery_image">
+                                        <span></span>
+                                    </figure>
+                                    <figcaption>
+                                        <h3 class="project_title"></h3>
+                                        <p class="project_description"></p>
+                                        <span>>> En savoir plus</span>
+                                    </figcaption>
+                                </div>
+                                <div class="project_overlay">
+                                    <div class="project_details">
+                                        <h4>Compétences</h4>
+                                        <ul class="competences_list"></ul>
+                                        <h4>Technologies</h4>
+                                        <ul class="technologies_list"></ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </a>
-                    <a href="" target="_blank" data-category="">
-                        <div class="project_content">
-                            <div class="project_view">
-                                <figure class="view_picture">
-                                    <img src="" alt="" class="gallery_image">
-                                    <span></span>
-                                </figure>
-                                <figcaption>
-                                    <h3 class="project_title"></h3>
-                                    <p class="project_description"></p>
-                                    <span>>> En savoir plus</span>
-                                </figcaption>
-                            </div>
-                            <div class="project_overlay">
-                                <div class="project_details">
-                                    <h4>Compétences</h4>
-                                    <ul class="competences_list"></ul>
-                                    <h4>Technologies</h4>
-                                    <ul class="technologies_list"></ul>
+                        </a>
+                        <a href="" target="_blank" data-category="">
+                            <div class="project_content">
+                                <div class="project_view">
+                                    <figure class="view_picture">
+                                        <img src="" alt="" class="gallery_image">
+                                        <span></span>
+                                    </figure>
+                                    <figcaption>
+                                        <h3 class="project_title"></h3>
+                                        <p class="project_description"></p>
+                                        <span>>> En savoir plus</span>
+                                    </figcaption>
+                                </div>
+                                <div class="project_overlay">
+                                    <div class="project_details">
+                                        <h4>Compétences</h4>
+                                        <ul class="competences_list"></ul>
+                                        <h4>Technologies</h4>
+                                        <ul class="technologies_list"></ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </a>
-                    <a href="" target="_blank" data-category="">
-                        <div class="project_content">
-                            <div class="project_view">
-                                <figure class="view_picture">
-                                    <img src="" alt="" class="gallery_image">
-                                    <span></span>
-                                </figure>
-                                <figcaption>
-                                    <h3 class="project_title"></h3>
-                                    <p class="project_description"></p>
-                                    <span>>> En savoir plus</span>
-                                </figcaption>
-                            </div>
-                            <div class="project_overlay">
-                                <div class="project_details">
-                                    <h4>Compétences</h4>
-                                    <ul class="competences_list"></ul>
-                                    <h4>Technologies</h4>
-                                    <ul class="technologies_list"></ul>
+                        </a>
+                        <a href="" target="_blank" data-category="">
+                            <div class="project_content">
+                                <div class="project_view">
+                                    <figure class="view_picture">
+                                        <img src="" alt="" class="gallery_image">
+                                        <span></span>
+                                    </figure>
+                                    <figcaption>
+                                        <h3 class="project_title"></h3>
+                                        <p class="project_description"></p>
+                                        <span>>> En savoir plus</span>
+                                    </figcaption>
+                                </div>
+                                <div class="project_overlay">
+                                    <div class="project_details">
+                                        <h4>Compétences</h4>
+                                        <ul class="competences_list"></ul>
+                                        <h4>Technologies</h4>
+                                        <ul class="technologies_list"></ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </a>
-                    <a href="" target="_blank" data-category="">
-                        <div class="project_content">
-                            <div class="project_view">
-                                <figure class="view_picture">
-                                    <img src="" alt="" class="gallery_image">
-                                    <span></span>
-                                </figure>
-                                <figcaption>
-                                    <h3 class="project_title"></h3>
-                                    <p class="project_description"></p>
-                                    <span>>> En savoir plus</span>
-                                </figcaption>
-                            </div>
-                            <div class="project_overlay">
-                                <div class="project_details">
-                                    <h4>Compétences</h4>
-                                    <ul class="competences_list"></ul>
-                                    <h4>Technologies</h4>
-                                    <ul class="technologies_list"></ul>
+                        </a>
+                        <a href="" target="_blank" data-category="">
+                            <div class="project_content">
+                                <div class="project_view">
+                                    <figure class="view_picture">
+                                        <img src="" alt="" class="gallery_image">
+                                        <span></span>
+                                    </figure>
+                                    <figcaption>
+                                        <h3 class="project_title"></h3>
+                                        <p class="project_description"></p>
+                                        <span>>> En savoir plus</span>
+                                    </figcaption>
+                                </div>
+                                <div class="project_overlay">
+                                    <div class="project_details">
+                                        <h4>Compétences</h4>
+                                        <ul class="competences_list"></ul>
+                                        <h4>Technologies</h4>
+                                        <ul class="technologies_list"></ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </a>
-                    <a href="" target="_blank" data-category="">
-                        <div class="project_content">
-                            <div class="project_view">
-                                <figure class="view_picture">
-                                    <img src="" alt="" class="gallery_image">
-                                    <span></span>
-                                </figure>
-                                <figcaption>
-                                    <h3 class="project_title"></h3>
-                                    <p class="project_description"></p>
-                                    <span>>> En savoir plus</span>
-                                </figcaption>
-                            </div>
-                            <div class="project_overlay">
-                                <div class="project_details">
-                                    <h4>Compétences</h4>
-                                    <ul class="competences_list"></ul>
-                                    <h4>Technologies</h4>
-                                    <ul class="technologies_list"></ul>
+                        </a>
+                        <a href="" target="_blank" data-category="">
+                            <div class="project_content">
+                                <div class="project_view">
+                                    <figure class="view_picture">
+                                        <img src="" alt="" class="gallery_image">
+                                        <span></span>
+                                    </figure>
+                                    <figcaption>
+                                        <h3 class="project_title"></h3>
+                                        <p class="project_description"></p>
+                                        <span>>> En savoir plus</span>
+                                    </figcaption>
+                                </div>
+                                <div class="project_overlay">
+                                    <div class="project_details">
+                                        <h4>Compétences</h4>
+                                        <ul class="competences_list"></ul>
+                                        <h4>Technologies</h4>
+                                        <ul class="technologies_list"></ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </a>
-                    <a href="" target="_blank" data-category="">
-                        <div class="project_content">
-                            <div class="project_view">
-                                <figure class="view_picture">
-                                    <img src="" alt="" class="gallery_image">
-                                    <span></span>
-                                </figure>
-                                <figcaption>
-                                    <h3 class="project_title"></h3>
-                                    <p class="project_description"></p>
-                                    <span>>> En savoir plus</span>
-                                </figcaption>
-                            </div>
-                            <div class="project_overlay">
-                                <div class="project_details">
-                                    <h4>Compétences</h4>
-                                    <ul class="competences_list"></ul>
-                                    <h4>Technologies</h4>
-                                    <ul class="technologies_list"></ul>
+                        </a>
+                        <a href="" target="_blank" data-category="">
+                            <div class="project_content">
+                                <div class="project_view">
+                                    <figure class="view_picture">
+                                        <img src="" alt="" class="gallery_image">
+                                        <span></span>
+                                    </figure>
+                                    <figcaption>
+                                        <h3 class="project_title"></h3>
+                                        <p class="project_description"></p>
+                                        <span>>> En savoir plus</span>
+                                    </figcaption>
+                                </div>
+                                <div class="project_overlay">
+                                    <div class="project_details">
+                                        <h4>Compétences</h4>
+                                        <ul class="competences_list"></ul>
+                                        <h4>Technologies</h4>
+                                        <ul class="technologies_list"></ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </a>
-                    <a href="" target="_blank" data-category="">
-                        <div class="project_content">
-                            <div class="project_view">
-                                <figure class="view_picture">
-                                    <img src="" alt="" class="gallery_image">
-                                    <span></span>
-                                </figure>
-                                <figcaption>
-                                    <h3 class="project_title"></h3>
-                                    <p class="project_description"></p>
-                                    <span>>> En savoir plus</span>
-                                </figcaption>
-                            </div>
-                            <div class="project_overlay">
-                                <div class="project_details">
-                                    <h4>Compétences</h4>
-                                    <ul class="competences_list"></ul>
-                                    <h4>Technologies</h4>
-                                    <ul class="technologies_list"></ul>
+                        </a>
+                        <a href="" target="_blank" data-category="">
+                            <div class="project_content">
+                                <div class="project_view">
+                                    <figure class="view_picture">
+                                        <img src="" alt="" class="gallery_image">
+                                        <span></span>
+                                    </figure>
+                                    <figcaption>
+                                        <h3 class="project_title"></h3>
+                                        <p class="project_description"></p>
+                                        <span>>> En savoir plus</span>
+                                    </figcaption>
+                                </div>
+                                <div class="project_overlay">
+                                    <div class="project_details">
+                                        <h4>Compétences</h4>
+                                        <ul class="competences_list"></ul>
+                                        <h4>Technologies</h4>
+                                        <ul class="technologies_list"></ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </a>
-                    <a href="" target="_blank" data-category="">
-                        <div class="project_content">
-                            <div class="project_view">
-                                <figure class="view_picture">
-                                    <img src="" alt="" class="gallery_image">
-                                    <span></span>
-                                </figure>
-                                <figcaption>
-                                    <h3 class="project_title"></h3>
-                                    <p class="project_description"></p>
-                                    <span>>> En savoir plus</span>
-                                </figcaption>
-                            </div>
-                            <div class="project_overlay">
-                                <div class="project_details">
-                                    <h4>Compétences</h4>
-                                    <ul class="competences_list"></ul>
-                                    <h4>Technologies</h4>
-                                    <ul class="technologies_list"></ul>
+                        </a>
+                        <a href="" target="_blank" data-category="">
+                            <div class="project_content">
+                                <div class="project_view">
+                                    <figure class="view_picture">
+                                        <img src="" alt="" class="gallery_image">
+                                        <span></span>
+                                    </figure>
+                                    <figcaption>
+                                        <h3 class="project_title"></h3>
+                                        <p class="project_description"></p>
+                                        <span>>> En savoir plus</span>
+                                    </figcaption>
+                                </div>
+                                <div class="project_overlay">
+                                    <div class="project_details">
+                                        <h4>Compétences</h4>
+                                        <ul class="competences_list"></ul>
+                                        <h4>Technologies</h4>
+                                        <ul class="technologies_list"></ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </a>
-                    <a href="" target="_blank" data-category="">
-                        <div class="project_content">
-                            <div class="project_view">
-                                <figure class="view_picture">
-                                    <img src="" alt="" class="gallery_image">
-                                    <span></span>
-                                </figure>
-                                <figcaption>
-                                    <h3 class="project_title"></h3>
-                                    <p class="project_description"></p>
-                                    <span>>> En savoir plus</span>
-                                </figcaption>
-                            </div>
-                            <div class="project_overlay">
-                                <div class="project_details">
-                                    <h4>Compétences</h4>
-                                    <ul class="competences_list"></ul>
-                                    <h4>Technologies</h4>
-                                    <ul class="technologies_list"></ul>
+                        </a>
+                        <a href="" target="_blank" data-category="">
+                            <div class="project_content">
+                                <div class="project_view">
+                                    <figure class="view_picture">
+                                        <img src="" alt="" class="gallery_image">
+                                        <span></span>
+                                    </figure>
+                                    <figcaption>
+                                        <h3 class="project_title"></h3>
+                                        <p class="project_description"></p>
+                                        <span>>> En savoir plus</span>
+                                    </figcaption>
+                                </div>
+                                <div class="project_overlay">
+                                    <div class="project_details">
+                                        <h4>Compétences</h4>
+                                        <ul class="competences_list"></ul>
+                                        <h4>Technologies</h4>
+                                        <ul class="technologies_list"></ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </a>
-                    <a href="" target="_blank" data-category="">
-                        <div class="project_content">
-                            <div class="project_view">
-                                <figure class="view_picture">
-                                    <img src="" alt="" class="gallery_image">
-                                    <span></span>
-                                </figure>
-                                <figcaption>
-                                    <h3 class="project_title"></h3>
-                                    <p class="project_description"></p>
-                                    <span>>> En savoir plus</span>
-                                </figcaption>
-                            </div>
-                            <div class="project_overlay">
-                                <div class="project_details">
-                                    <h4>Compétences</h4>
-                                    <ul class="competences_list"></ul>
-                                    <h4>Technologies</h4>
-                                    <ul class="technologies_list"></ul>
+                        </a>
+                        <a href="" target="_blank" data-category="">
+                            <div class="project_content">
+                                <div class="project_view">
+                                    <figure class="view_picture">
+                                        <img src="" alt="" class="gallery_image">
+                                        <span></span>
+                                    </figure>
+                                    <figcaption>
+                                        <h3 class="project_title"></h3>
+                                        <p class="project_description"></p>
+                                        <span>>> En savoir plus</span>
+                                    </figcaption>
+                                </div>
+                                <div class="project_overlay">
+                                    <div class="project_details">
+                                        <h4>Compétences</h4>
+                                        <ul class="competences_list"></ul>
+                                        <h4>Technologies</h4>
+                                        <ul class="technologies_list"></ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </a>
-                </div>
+                        </a>
+                    </div>
             </section>
 
             <section id="training">
-                <div class="title center">
-                    <h2 class="underline">Formation</h2>
+                <div class="center">
+                    <h2 class="underline title">Formation</h2>
                 </div>
                 <div class="training_container">
 
