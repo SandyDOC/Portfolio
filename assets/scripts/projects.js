@@ -74,7 +74,7 @@ function updateProjects() {
 
         if (projectElement) {
             // Mise à jour des attributs et contenu existants
-            projectElement.href = `https://github.com/SandyDOC/${project.link.replace(/\s+/g, '_')}/`;
+            projectElement.href = `https://github.com/SandyDOC/${project.link}/`;
             projectElement.setAttribute('data-category', project["data-category"]);
 
             const img = projectElement.querySelector('img.gallery_image');
@@ -86,6 +86,15 @@ function updateProjects() {
                 img.src = `./assets/images/${project.image}`;
                 img.alt = `Aperçu du projet ${project.title}`;
             }
+            // if (img) {
+            //     if (project.image) {
+            //         img.src = `./assets/images/${project.image}`;
+            //     } else {
+            //         img.src = './assets/images/profil.png';
+            //     }
+            //     img.alt = `Aperçu du projet ${project.title}`;
+            // }
+            
             if (tagLine) {
                 tagLine.textContent = project.tagLine;
             }

@@ -3,7 +3,7 @@ window.dataProjects =
     [
         {
             "data-category": "1",
-            "image": "riding-cities.png",
+            "image": "riding-cities.webp",
             "tagLine": "html/css",
             "title": "Riding cities",
             "link": "Riding_Cities",
@@ -12,7 +12,7 @@ window.dataProjects =
             "technologies": ["HTML/CSS", "maquette Figma"]
         }, {
             "data-category": "1 2",
-            "image": "booki.png",
+            "image": "booki.webp",
             "tagLine": "responsive",
             "title": "Booki",
             "link": "Booki",
@@ -25,7 +25,7 @@ window.dataProjects =
             "technologies": ["HTML/CSS","maquette Figma", "Visual Studio Code"]
         }, {
             "data-category": "1 2 3",
-            "image": "ohMyFood.png",
+            "image": "ohMyFood.webp",
             "tagLine": "sass",
             "title": "OhMyFood",
             "link": "OhMyFood",
@@ -38,7 +38,7 @@ window.dataProjects =
             "technologies": ["HTML/CSS","maquette Figma", "GitHub", "Sass"]
         }, {
             "data-category": "1 4",
-            "image": "print-it.png",
+            "image": "print-it.webp",
             "tagLine": "javascript",
             "title": "Print it",
             "link": "Print-it-JS",
@@ -47,7 +47,7 @@ window.dataProjects =
             "technologies": "Javascript"
         }, {
             "data-category": "1 3 4",
-            "image": "sophie-bluel.png",
+            "image": "sophie-bluel.webp",
             "tagLine": "javascript",
             "title": "Sophie Bluel",
             "link": "Sophie-Bluel-portfolio-architecte-",
@@ -60,7 +60,7 @@ window.dataProjects =
             "technologies": ["Javascript", "Back-end : node.js", "Documentation API Swagger", "maquette Figma"]
         }, {
             "data-category": "2 5",
-            "image": "kasa.png",
+            "image": "kasa.webp",
             "tagLine": "react",
             "title": "Kasa",
             "link": "P7_Kasa",
@@ -75,7 +75,7 @@ window.dataProjects =
             "technologies": ["React", "React Router", "Sass", "maquette Figma"]
         }, {
             "data-category": "6",
-            "image": "nina-carducci.png",
+            "image": "nina-carducci.webp",
             "tagLine": "développement",
             "title": "Nina Carducci",
             "link": "Nina_Carducci",
@@ -84,7 +84,7 @@ window.dataProjects =
             "technologies": ["Lighthouse", "Wave", "Rich Snippet Google"]
         }, {
             "data-category": "6",
-            "image": "724events.png",
+            "image": "724events.webp",
             "tagLine": "développement",
             "title": "724 events",
             "link": "724events",
@@ -97,7 +97,7 @@ window.dataProjects =
             "technologies": ["React Developer Tools", "Node.js/npm", "Yarn", "jest"]
         }, {
             "data-category": "2 5",
-            "image": "ArgentBank.png",
+            "image": "ArgentBank.webp",
             "tagLine": "react",
             "title": "ArgentBank",
             "link": "ArgentBank",
@@ -110,7 +110,7 @@ window.dataProjects =
             "technologies": ["React", "Redux", "MongoDB", "Documentation API Swagger"]
         }, {
             "data-category": "6",
-            "image": "menu-maker.png",
+            "image": "menu-maker.webp",
             "tagLine": "développement",
             "title": "Menu Maker",
             "link": "Menu_Maker_by_Qwenta",
