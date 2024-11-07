@@ -25,7 +25,7 @@ window.dataProjects =
             "technologies": ["HTML/CSS","maquette Figma", "Visual Studio Code"]
         }, {
             "data-category": "1 2 3",
-            "image": "ohMyFood.webp",
+            "image": "OhMyFood.webp",
             "tagLine": "sass",
             "title": "OhMyFood",
             "link": "OhMyFood",
@@ -97,7 +97,7 @@ window.dataProjects =
             "technologies": ["React Developer Tools", "Node.js/npm", "Yarn", "jest"]
         }, {
             "data-category": "2 5",
-            "image": "ArgentBank.webp",
+            "image": "argentBank.webp",
             "tagLine": "react",
             "title": "ArgentBank",
             "link": "ArgentBank",
