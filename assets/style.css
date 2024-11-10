@@ -649,7 +649,9 @@ footer img {
   }
   #about article p {
     font-size: 0.70em;
-    padding-left: 21px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
   }
   #skills .skills_list ul {
     flex-wrap: wrap;
