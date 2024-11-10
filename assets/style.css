@@ -622,6 +622,9 @@ footer img {
     padding: 20px 0 20px 0;
     height: fit-content;
   }
+  .about_container {
+    padding-left: 0;
+  }
   .about_screen img{
     height: 108px;
   }
