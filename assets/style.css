@@ -605,6 +605,7 @@ footer img {
     width: 100%;
     gap: 10px;
     padding-left: 0;
+    font-size: 0.85em;
   }
   header nav ul li a {
    font-size: 0.63em;
