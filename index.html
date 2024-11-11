@@ -11,7 +11,6 @@
     <script src="./assets/scripts/config.js" defer></script>
     <script src="./assets/scripts/projects.js" defer></script>
     <script src="./assets/scripts/filters.js" defer></script>
-    <script src="./assets/scripts/copy.js" defer></script>
     <script src="./assets/scripts/script.js" defer></script>
 </head>
 
@@ -33,6 +32,7 @@
                 </ul>
             </nav>
         </header>
+
         <main>
             <section id="about">
                 <div class="about_screen">
@@ -59,6 +59,7 @@
                     </article>
                 </div>
             </section>
+
             <section id="skills">
                 <div class="center">
                     <h2 class="underline title">Mes compétences</h2>
@@ -92,9 +93,11 @@
                     </ul>
                 </div>
             </section>
+
             <section id="portfolio">
                 <div class="center">
                     <h2 class="underline title">Mes projets</h2>
+                    <!-- Affichage d'une liste déroulante en version mobile -->
                     <h3 class="hide">Catégories</h3>
                     <div class="selectContainer hide">
                         <button id="categoryDropdownButton" class="dropdown-button" data-category="0">
@@ -103,7 +106,6 @@
                                 <i id="dropdownArrow" class="fas fa-chevron-down"></i>
                             </span>
                         </button>
-
                         <ul id="categoryDropdownList" class="dropdown-list hide">
                             <li data-category="0">Tous</li>
                             <li data-category="1">HTML/CSS</li>
@@ -114,6 +116,7 @@
                             <li data-category="6">Développement Web</li>
                         </ul>
                     </div>
+                    <!-- Affichage des boutons filtres (desktop)-->
                     <div class="filters">
                         <button class="filters-button btn-selected" data-category="0">Tous</button>
                         <button class="filters-button" data-category="1">HTML/CSS</button>
@@ -123,21 +126,20 @@
                         <button class="filters-button" data-category="5">React</button>
                         <button class="filters-button" data-category="6">Développement web</button>
                     </div>
+
                     <div class="gallery">
                         <a href="" target="_blank" data-category="" title="projet 1 Riding Cities">
                             <div class="project_content">
-                                <div class="project_view">
-                                    <figure class="view_picture">
-                                        <img src="./assets/images/profil.webp" alt="" class="gallery_image">
-                                        <span></span>
-                                        <figcaption>
-                                            <h3 class="project_title"></h3>
-                                            <p class="project_description"></p>
-                                            <p>>> Cliquez vers GitHub</p>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <div class="project_overlay" >
+                                <figure class="view_picture">
+                                    <img src="./assets/images/profil.webp" alt="" class="gallery_image">
+                                    <span></span>
+                                    <figcaption>
+                                        <h3 class="project_title"></h3>
+                                        <p class="project_description"></p>
+                                        <p>>> Cliquez vers GitHub</p>
+                                    </figcaption>
+                                </figure>
+                                <div class="project_overlay">
                                     <div class="project_details">
                                         <h4>Compétences</h4>
                                         <ul class="competences_list"></ul>
@@ -147,19 +149,17 @@
                                 </div>
                             </div>
                         </a>
-                        <a href="" target="_blank" data-category=""  title="projet 2 Booki">
+                        <a href="" target="_blank" data-category="" title="projet 2 Booki">
                             <div class="project_content">
-                                <div class="project_view">
-                                    <figure class="view_picture">
-                                        <img src="./assets/images/profil.webp" alt="" class="gallery_image">
-                                        <span></span>
-                                        <figcaption>
-                                            <h3 class="project_title"></h3>
-                                            <p class="project_description"></p>
-                                            <p>>> Cliquez vers GitHub</p>
-                                        </figcaption>
-                                    </figure>
-                                </div>
+                                <figure class="view_picture">
+                                    <img src="./assets/images/profil.webp" alt="" class="gallery_image">
+                                    <span></span>
+                                    <figcaption>
+                                        <h3 class="project_title"></h3>
+                                        <p class="project_description"></p>
+                                        <p>>> Cliquez vers GitHub</p>
+                                    </figcaption>
+                                </figure>
                                 <div class="project_overlay">
                                     <div class="project_details">
                                         <h4>Compétences</h4>
@@ -172,17 +172,15 @@
                         </a>
                         <a href="" target="_blank" data-category="" title="projet 3 Oh my food">
                             <div class="project_content">
-                                <div class="project_view">
-                                    <figure class="view_picture">
-                                        <img src="./assets/images/profil.webp" alt="" class="gallery_image">
-                                        <span></span>
-                                        <figcaption>
-                                            <h3 class="project_title"></h3>
-                                            <p class="project_description"></p>
-                                            <p>>> Cliquez vers GitHub</p>
-                                        </figcaption>
-                                    </figure>
-                                </div>
+                                <figure class="view_picture">
+                                    <img src="./assets/images/profil.webp" alt="" class="gallery_image">
+                                    <span></span>
+                                    <figcaption>
+                                        <h3 class="project_title"></h3>
+                                        <p class="project_description"></p>
+                                        <p>>> Cliquez vers GitHub</p>
+                                    </figcaption>
+                                </figure>
                                 <div class="project_overlay">
                                     <div class="project_details">
                                         <h4>Compétences</h4>
@@ -195,17 +193,15 @@
                         </a>
                         <a href="" target="_blank" data-category="" title="projet 4 Print it">
                             <div class="project_content">
-                                <div class="project_view">
-                                    <figure class="view_picture">
-                                        <img src="./assets/images/profil.webp" alt="" class="gallery_image">
-                                        <span></span>
-                                        <figcaption>
-                                            <h3 class="project_title"></h3>
-                                            <p class="project_description"></p>
-                                            <p>>> Cliquez vers GitHub</p>
-                                        </figcaption>
-                                    </figure>
-                                </div>
+                                <figure class="view_picture">
+                                    <img src="./assets/images/profil.webp" alt="" class="gallery_image">
+                                    <span></span>
+                                    <figcaption>
+                                        <h3 class="project_title"></h3>
+                                        <p class="project_description"></p>
+                                        <p>>> Cliquez vers GitHub</p>
+                                    </figcaption>
+                                </figure>
                                 <div class="project_overlay">
                                     <div class="project_details">
                                         <h4>Compétences</h4>
@@ -216,19 +212,17 @@
                                 </div>
                             </div>
                         </a>
-                        <a href="" target="_blank" data-category=""  title="projet 5 Sophie Blue - portfolio">
+                        <a href="" target="_blank" data-category="" title="projet 5 Sophie Blue - portfolio">
                             <div class="project_content">
-                                <div class="project_view">
-                                    <figure class="view_picture">
-                                        <img src="./assets/images/profil.webp" alt="" class="gallery_image">
-                                        <span></span>
-                                        <figcaption>
-                                            <h3 class="project_title"></h3>
-                                            <p class="project_description"></p>
-                                            <p>>> Cliquez vers GitHub</p>
-                                        </figcaption>
-                                    </figure>
-                                </div>
+                                <figure class="view_picture">
+                                    <img src="./assets/images/profil.webp" alt="" class="gallery_image">
+                                    <span></span>
+                                    <figcaption>
+                                        <h3 class="project_title"></h3>
+                                        <p class="project_description"></p>
+                                        <p>>> Cliquez vers GitHub</p>
+                                    </figcaption>
+                                </figure>
                                 <div class="project_overlay">
                                     <div class="project_details">
                                         <h4>Compétences</h4>
@@ -241,17 +235,15 @@
                         </a>
                         <a href="" target="_blank" data-category="" title="projet 6 Kasa">
                             <div class="project_content">
-                                <div class="project_view">
-                                    <figure class="view_picture">
-                                        <img src="./assets/images/profil.webp" alt="" class="gallery_image">
-                                        <span></span>
-                                        <figcaption>
-                                            <h3 class="project_title"></h3>
-                                            <p class="project_description"></p>
-                                            <p>>> Cliquez vers GitHub</p>
-                                        </figcaption>
-                                    </figure>
-                                </div>
+                                <figure class="view_picture">
+                                    <img src="./assets/images/profil.webp" alt="" class="gallery_image">
+                                    <span></span>
+                                    <figcaption>
+                                        <h3 class="project_title"></h3>
+                                        <p class="project_description"></p>
+                                        <p>>> Cliquez vers GitHub</p>
+                                    </figcaption>
+                                </figure>
                                 <div class="project_overlay">
                                     <div class="project_details">
                                         <h4>Compétences</h4>
@@ -262,19 +254,17 @@
                                 </div>
                             </div>
                         </a>
-                        <a href="" target="_blank" data-category=""  title="projet 7 Nina Carducci - photographe">
+                        <a href="" target="_blank" data-category="" title="projet 7 Nina Carducci - photographe">
                             <div class="project_content">
-                                <div class="project_view">
-                                    <figure class="view_picture">
-                                        <img src="./assets/images/profil.webp" alt="" class="gallery_image">
-                                        <span></span>
-                                        <figcaption>
-                                            <h3 class="project_title"></h3>
-                                            <p class="project_description"></p>
-                                            <p>>> Cliquez vers GitHub</p>
-                                        </figcaption>
-                                    </figure>
-                                </div>
+                                <figure class="view_picture">
+                                    <img src="./assets/images/profil.webp" alt="" class="gallery_image">
+                                    <span></span>
+                                    <figcaption>
+                                        <h3 class="project_title"></h3>
+                                        <p class="project_description"></p>
+                                        <p>>> Cliquez vers GitHub</p>
+                                    </figcaption>
+                                </figure>
                                 <div class="project_overlay">
                                     <div class="project_details">
                                         <h4>Compétences</h4>
@@ -285,19 +275,17 @@
                                 </div>
                             </div>
                         </a>
-                        <a href="" target="_blank" data-category=""  title="projet 8 : 724 events">
+                        <a href="" target="_blank" data-category="" title="projet 8 : 724 events">
                             <div class="project_content">
-                                <div class="project_view">
-                                    <figure class="view_picture">
-                                        <img src="./assets/images/profil.webp" alt="" class="gallery_image">
-                                        <span></span>
-                                        <figcaption>
-                                            <h3 class="project_title"></h3>
-                                            <p class="project_description"></p>
-                                            <p>>> Cliquez vers GitHub</p>
-                                        </figcaption>
-                                    </figure>
-                                </div>
+                                <figure class="view_picture">
+                                    <img src="./assets/images/profil.webp" alt="" class="gallery_image">
+                                    <span></span>
+                                    <figcaption>
+                                        <h3 class="project_title"></h3>
+                                        <p class="project_description"></p>
+                                        <p>>> Cliquez vers GitHub</p>
+                                    </figcaption>
+                                </figure>
                                 <div class="project_overlay">
                                     <div class="project_details">
                                         <h4>Compétences</h4>
@@ -310,17 +298,15 @@
                         </a>
                         <a href="" target="_blank" data-category="" title="projet 9 ArgentBank">
                             <div class="project_content">
-                                <div class="project_view">
-                                    <figure class="view_picture">
-                                        <img src="./assets/images/profil.webp" alt="" class="gallery_image">
-                                        <span></span>
-                                        <figcaption>
-                                            <h3 class="project_title"></h3>
-                                            <p class="project_description"></p>
-                                            <p>>> Cliquez vers GitHub</p>
-                                        </figcaption>
-                                    </figure>
-                                </div>
+                                <figure class="view_picture">
+                                    <img src="./assets/images/profil.webp" alt="" class="gallery_image">
+                                    <span></span>
+                                    <figcaption>
+                                        <h3 class="project_title"></h3>
+                                        <p class="project_description"></p>
+                                        <p>>> Cliquez vers GitHub</p>
+                                    </figcaption>
+                                </figure>
                                 <div class="project_overlay">
                                     <div class="project_details">
                                         <h4>Compétences</h4>
@@ -331,19 +317,17 @@
                                 </div>
                             </div>
                         </a>
-                        <a href="" target="_blank" data-category=""  title="projet 10 Menu Maker">
+                        <a href="" target="_blank" data-category="" title="projet 10 Menu Maker">
                             <div class="project_content">
-                                <div class="project_view">
-                                    <figure class="view_picture">
-                                        <img src="./assets/images/profil.webp" alt="" class="gallery_image">
-                                        <span></span>
-                                        <figcaption>
-                                            <h3 class="project_title"></h3>
-                                            <p class="project_description"></p>
-                                            <p>>> Cliquez vers GitHub</p>
-                                        </figcaption>
-                                    </figure>
-                                </div>
+                                <figure class="view_picture">
+                                    <img src="./assets/images/profil.webp" alt="" class="gallery_image">
+                                    <span></span>
+                                    <figcaption>
+                                        <h3 class="project_title"></h3>
+                                        <p class="project_description"></p>
+                                        <p>>> Cliquez vers GitHub</p>
+                                    </figcaption>
+                                </figure>
                                 <div class="project_overlay">
                                     <div class="project_details">
                                         <h4>Compétences</h4>
@@ -359,11 +343,8 @@
             </section>
 
             <section id="training">
-                <div class="center">
-                    <h2 class="underline title">Formation</h2>
-                </div>
+                <h2 class="underline title center">Formation</h2>
                 <div class="training_container">
-
                     <article>
                         <h3>Technicienne de laboratoire</h3>
                         <h4>Bac +3</h4>
@@ -380,48 +361,40 @@
             <a href="#" class="pageUp">
                 <i class="fa-solid fa-arrow-up arrowUp" title="Vers le haut de la page"></i>
             </a>
-
         </main>
+
         <footer>
             <section id="contact">
                 <div class="title center">
                     <h2>Contact</h2>
                 </div>
                 <div class="footer_infos">
-
                     <div class="informations">
                         <div class="footer_logo">
-                            <a href="#about" class="footer_me">
+                            <a href="#about" class="footer_me" title="A propos de moi">
                                 <img src="./assets/images/profil.webp" alt="web developer picture">
                                 <p>Sandy D<span>Intégrateur web</span></p>
                             </a>
                         </div>
-
                         <ul>
                             <li>
                                 <i class="fa-solid fa-location-dot"></i>
                                 <span>Paris</span>
                             </li>
                             <li>
-                                <a href="https://github.com/SandyDOC" target="_blank" class="hoverGreen" title="Cliquez vers GitHub">
+                                <a href="https://github.com/SandyDOC" target="_blank" class="hoverGreen"
+                                    title="Cliquez vers GitHub">
                                     <i class="fa-brands fa-github"></i>
                                     <span>GitHub</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.linkedin.com/in/sandydambre" target="_blank" class="hoverGreen" title="Cliquez vers LinkedIn">
+                                <a href="https://www.linkedin.com/in/sandydambre" target="_blank" class="hoverGreen"
+                                    title="Cliquez vers LinkedIn">
                                     <i class="fa-brands fa-linkedin"></i>
                                     <span>LinkedIn</span>
                                 </a>
                             </li>
-                            <!-- <li class="footer_mail">
-                                <i class="fa-solid fa-at"></i>
-                                <span id="emailPlaceholder">CopyMyEmail</span>
-                                <i class="fa-solid fa-caret-right"></i>
-                                <i class="fa-regular fa-copy hoverGreen" id="copyIcon" onclick="generateAndCopyEmail()"
-                                    title="Copie de l'adresse email"></i>
-                                <span id="tooltip" class="tooltip-text">Copier</span>
-                            </li> -->
                         </ul>
                     </div>
                 </div>

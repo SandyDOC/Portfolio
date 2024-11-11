@@ -1,4 +1,4 @@
-// const dataProjects est bien globalement accessible dans tous tes fichiers JavaScript. Si ce n’est pas le cas, tu peux aussi essayer d’utiliser window.dataProjects pour t'assurer qu'il est disponible globalement
+// Données des projets
 window.dataProjects =
     [
         {

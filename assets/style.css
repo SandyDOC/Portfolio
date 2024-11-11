@@ -177,7 +177,7 @@ main {
 #skills .skills_list ul li i {
   font-size: 2.5em;
 }
-.list_tag{
+.list_tag {
   padding-top: 20px;
   display: flex;
   gap: 4%;
@@ -188,7 +188,7 @@ main {
   width: 100%;
   object-fit: contain;
 }
-.hide{
+.hide {
   display: none;
 }
 .filters {
@@ -200,14 +200,14 @@ main {
 .filters-button {
   font-family: "Syne";
   font-weight: 700;
-  color: #1d6154;
-  background-color: #fffef8;
+  color: var(--green);
+  background-color: var(--white);
   display: flex;
   align-items: center;
   padding: 0px 15px 0px 15px;
   height: 37px;
   border-radius: 60px;
-  border: 1px solid #1d6154;
+  border: 1px solid var(--green);
   max-width: 216px;
 
   font-size: 1em;
@@ -215,13 +215,13 @@ main {
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 .btn-selected {
-  color: #fffef8;
-  background-color: #1d6154;
+  color: var(--white);
+  background-color: var(--green);
 }
 .filters-button:hover,
 .arrowUp:hover {
-  color: #fffef8;
-  background-color: #1d6154;
+  color: var(--white);
+  background-color: var(--green);
   cursor: pointer;
 }
 
@@ -243,10 +243,10 @@ main {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  border: 1px solid #ccc;
+  border: 1px solid var(--ivory);
   background-color: var(--white);
   position: absolute;
-  width: fit-content; 
+  width: fit-content;
   z-index: 100;
   border-radius: 13px;
 }
@@ -256,7 +256,7 @@ main {
   cursor: pointer;
 }
 .dropdown-list li:hover {
-  background-color:var(--green);
+  background-color: var(--green);
   color: var(--white);
   outline: none;
 }
@@ -350,7 +350,7 @@ main {
 .gallery figcaption {
   margin: 0;
   padding: 5px 10px 10px 10px;
-  background: linear-gradient(to bottom, transparent, black); 
+  background: linear-gradient(to bottom, transparent, black);
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   height: 108px;
@@ -359,19 +359,16 @@ main {
   color: var(--black);
   font-size: 1.125em;
   font-weight: 700;
-  padding-top: 9px;
   margin: 0;
 }
 .gallery figcaption p.project_description {
-  color:var(--white);
+  color: var(--white);
   font-size: 0.95em;
   font-weight: 300;
-  margin-top: 0px;
-  padding-bottom: 5px;
+  margin-top: 3px;
   justify-content: flex-start;
-  padding-top: 5px;
 }
-.gallery figcaption p{
+.gallery figcaption p {
   font-size: 0.85em;
   color: var(--white);
   display: flex;
@@ -388,9 +385,9 @@ main {
   right: 0;
   height: 100%;
   width: 100%;
-  opacity: 0; 
-  transition: opacity 0.5s ease; 
-  background-color: rgba(0,140,186,0.85); 
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  background-color: rgba(0, 140, 186, 1);
   border-radius: 10px;
 }
 
@@ -399,16 +396,16 @@ main {
 }
 .gallery a:hover .project_view {
   opacity: 0;
-  transition: opacity 0.5s ease; 
+  transition: opacity 0.5s ease;
 }
 
 .project_view {
   opacity: 1;
-  transition: opacity 0.5s ease; 
+  transition: opacity 0.5s ease;
 }
 
 .project_details {
-  color: white;
+  color: var(--white);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -418,19 +415,19 @@ main {
   text-align: left;
   width: 90%;
 }
-.project_details h4{
+.project_details h4 {
   margin-bottom: -23px;
   margin-top: 0px;
 }
 .competences_list,
-.technologies_list{
+.technologies_list {
   list-style: inside;
   font-size: 0.8em;
   padding: 1px;
   padding-top: 0.7em;
 }
 .competences_list li,
-.technologies_list li{
+.technologies_list li {
   padding: 2px;
 }
 .training_container {
@@ -445,22 +442,21 @@ main {
   padding-left: 22px;
 }
 .pageUp {
-  display: inline-block; 
+  display: inline-block;
   margin-top: 20px;
   margin-left: 96%;
-  margin-right: 0; 
+  margin-right: 0;
 }
 
 .arrowUp {
   border-radius: 30px;
-  padding: 16px; 
+  padding: 16px;
   border: 3px solid var(--green);
   color: var(--green);
   background-color: var(--white);
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-  cursor: pointer; 
+  cursor: pointer;
 }
-
 
 footer {
   color: var(--white);
@@ -533,36 +529,6 @@ footer img {
   font-size: 13px;
   letter-spacing: 0.1em;
 }
-/* .footer_mail {
-  position: relative;
-  display: flex;
-  gap: 5px;
-} */
-
-/* .tooltip-text {
-  visibility: hidden;
-  background-color: var(--black);
-  color: var(--white);
-  text-align: center;
-  border-radius: 5px;
-  padding: 5px;
-  position: absolute;
-  z-index: 1;
-  bottom: 150%;
-  transform: translateX(-50%);
-  opacity: 0;
-  transition: opacity 0.3s, visibility 0.3s;
-  font-size: 12px;
-}
-
-#copyIcon:hover ~ .tooltip-text {
-  visibility: visible;
-  opacity: 1;
-}
-
-.footer .informations ul li.fa-regular.fa-copy{
-  cursor: pointer;
-} */
 
 /** Media queries **/
 @media (max-width: 1024px) {
@@ -575,9 +541,6 @@ footer img {
   .filters {
     flex-wrap: wrap;
   }
-  /* .footer_mail{
-    display: inline;
-  } */
 }
 
 @media (max-width: 768px) {
@@ -608,7 +571,7 @@ footer img {
     font-size: 0.85em;
   }
   header nav ul li a {
-   font-size: 0.63em;
+    font-size: 0.63em;
   }
   main {
     width: 100%;
@@ -625,7 +588,7 @@ footer img {
   .about_container {
     padding-left: 0;
   }
-  .about_screen img{
+  .about_screen img {
     height: 108px;
   }
   #about article {
@@ -644,11 +607,11 @@ footer img {
   .underline {
     text-decoration: underline;
   }
-  .soft-skills .tag{
+  .soft-skills .tag {
     font-size: 0.65em;
   }
   #about article p {
-    font-size: 0.70em;
+    font-size: 0.7em;
     margin-left: auto;
     margin-right: auto;
     width: 95%;
@@ -670,7 +633,7 @@ footer img {
   #skills .skills_list ul li span {
     font-size: 0.65em;
   }
-  .list_tag{
+  .list_tag {
     display: inline;
   }
   .canva {
@@ -683,11 +646,9 @@ footer img {
   #portfolio .center {
     flex-direction: column;
     align-items: center;
-    padding-bottom: 23px;
   }
   #portfolio h3 {
     display: block;
-
     font-size: 0.93em;
     font-weight: 600;
   }
@@ -710,29 +671,37 @@ footer img {
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.5);
     cursor: pointer;
   }
-  .project_description{
+  .gallery figcaption {
+    height: 80px;
+  }
+  .gallery figcaption p.project_description {
+    font-size: 0.8em;
+    padding-bottom: 5px;
+  }
+  .gallery figcaption p {
     font-size: 0.75em;
+    margin: 0;
   }
   a.pageUp {
     margin-left: 80%;
   }
-  .training_container{
+  .training_container {
     justify-content: space-around;
   }
-  .gallery{
+  .gallery {
     background: var(--white);
   }
   .training_container article {
     width: 40%;
     height: 114px;
   }
-  .training_container article h3{
+  .training_container article h3 {
     font-size: 0.85em;
   }
-  .training_container article h4{
+  .training_container article h4 {
     font-size: 0.75em;
   }
-  .training_container article p{
+  .training_container article p {
     font-size: 0.75em;
   }
   footer {
