@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', 'Syne', sans-serif;
   letter-spacing: 0.8px;
   background: #fffef8;
   color: var(--black);
@@ -505,7 +505,7 @@ footer .informations {
   align-items: center;
   margin-bottom: 45px;
   margin-left: 56px;
-  max-width: 220px;
+  max-width: 223px;
 }
 .footer_me {
   display: flex;
